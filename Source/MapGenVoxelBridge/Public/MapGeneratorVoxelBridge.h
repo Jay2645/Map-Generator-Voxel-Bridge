@@ -4,7 +4,7 @@
 
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "Maps/IslandMapGenerator.h"
-#include "Paging/PagedVolume.h"
+#include "Paging/LandWaterVolume.h"
 #include "MapGeneratorVoxelBridge.generated.h"
 
 /**
@@ -16,5 +16,5 @@ class MAPGENVOXELBRIDGE_API UMapGeneratorVoxelBridge : public UBlueprintFunction
 	GENERATED_BODY()
 public:
 	UFUNCTION(BlueprintCallable, Category="Voxel|Map")
-	static void CreateVoxelsFromMap(AIslandMapGenerator* MapGenerator, APagedVolume* VoxelVolume, int32 MapHeight);
+	static void CreateVoxelsFromMap(AIslandMapGenerator* MapGenerator, ALandWaterVolume* VoxelVolume, int32 MapHeight);
 };
